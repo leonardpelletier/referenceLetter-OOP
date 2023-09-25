@@ -1,47 +1,39 @@
 class ReferenceLetter {
-    
-    private String name;
-    
-    public ReferenceLetter() {
-        //nothing to do...
-    }
-    
-    public ReferenceLetter(String n) {
-        name = n;
-    }
-    
-    public void writeLetter(){
-        salutation();
-        academicPerformance();
-        extraCurriculars();
-        personality();
-        conclusion();
-    }
+  String teacherName;
 
-    private void salutation() {
-        System.out.println("To whom it may concern,");
-        System.out.println();
-    }
+  public ReferenceLetter() {
+    teacherName = "Leonard Pelletier";
+  }
 
-    private void academicPerformance() {
-        System.out.println(name + " is crushing it in school.");
-        System.out.println();
-    }
-    
-    private void extraCurriculars() {
-        System.out.println("They are also passionate about many interests.");
-        System.out.println();
-    }
+  public ReferenceLetter(String name) {
+    teacherName = name;
+  }
 
-    private void personality() {
-        System.out.println("Above all else, "+name+" is a good human being.");
-        System.out.println();
-    }
+  public void print(String studentName, int yearsTaught) {
+    printIntro();
+    printBody(studentName, yearsTaught);
+    printSignature();
+    printFooter();
+  }
 
-    private void conclusion() {
-        System.out.println("I give "+name+" my strongest recommendation.");
-        System.out.println();
-        System.out.println("-- Mr. Pelletier");
-    }
+  public void printIntro() {
+    System.out.println("To Whom It May Concern:");
+    System.out.println("");
+  }
+
+  public void printBody(String studentName, int yearsTaught) {
+    System.out.println(
+        "It has been an honor to teach " + studentName + ". I have taught this student for " + yearsTaught + " years. If you don't accept them to your university, you are a fool!");
+  }
+
+  public void printSignature() {
+    System.out.println("");
+    System.out.println("Sincerely,");
+    System.out.println(teacherName);
+  }
+
+  public void printFooter() {
+    System.out.println();
+  }
 
 }
