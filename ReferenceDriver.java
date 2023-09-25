@@ -1,10 +1,10 @@
-class ReferenceDriver {
+class Main {
+  public static void main(String[] args) {
+    ReferenceLetter myLetter = new ReferenceLetter();
+    myLetter.print("Cal Culator", 1);
+    myLetter.print("Al Gebra", 3);
 
-    public static void main(String[] args) {
-        ReferenceLetter RL;
-        RL = new ReferenceLetter("Bill");
-        RL.writeLetter();
-
-    }
-
+    ReferenceLetter schniederLetter = new ReferenceLetter("Katrina Schnieder");
+    schniederLetter.print("Bob Loblaw", -1);
+  }
 }
